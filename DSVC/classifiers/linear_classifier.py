@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import numpy as np
 from DSVC.classifiers.linear_svm import *
 from past.builtins import xrange
@@ -55,7 +53,7 @@ class LinearClassifier(object):
             # replacement is faster than sampling without replacement.              #
             #########################################################################
             ind = np.random.choice(num_train,batch_size)
-            X_batch = X[ind]
+            X_batch = X[ind,:]
             y_batch = y[ind]
             #########################################################################
             #                       END OF YOUR CODE                                #
